@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>search array</title>
+
+<script type="text/javascript">
+	
+const myTodos = [{title:'Make videos',isDone: true},
+				 {title: 'go to gym',isDone: false},
+				 {title: 'study 6 hours',isDone:false}]
+
+
+//console.log(myTodos.indexOf('go to gym'));
+
+
+
+/*const index = myTodos.findIndex(function(todo,index)
+
+
+{
+
+	console.log(todo);
+
+return todo.title === 'go to gym';
+
+})
+
+console.log(index);
+*/
+const findTodo = function(newTodos,title)
+{
+
+const index = newTodos.findIndex(function(anytodos,index)
+{
+
+	return anytodos.title.toLowerCase() === title.toLowerCase()
+
+})
+
+return newTodos[index];
+
+
+}
+ 
+
+ let printMe= findTodo(myTodos,'study 6 hours');
+
+ console.log(printMe);
+
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

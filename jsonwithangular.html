@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+<head>
+	<title>Parsing of Json element in table with ang js</title>
+	<script type="text/javascript" src="angular1.7.js"></script>
+	<script type="text/javascript">
+		
+		var myapp=angular.module('myapp',[]);
+		myapp.controller('democontroller',function($scope,$http){
+
+			$http.get("http://www.w3schools.com/angular/customers.php")
+			.success(function(response){$scope.names=response.records});
+
+		});
+	</script>
+
+</head>
+<body ng-controller="democontroller">
+
+	<table cellspacing="2" cellpadding="2" border="1">
+		<tr>
+			<th>Name</th>
+			<th>City</th>	
+			<th>Country</th>
+		</tr>
+		<tr ng-repeat = "item in names">
+			<td>{{item.Name}}</td>
+			<td>{{item.City}}</td>	
+			<td>{{item.Country}}</td>
+		</tr>
+
+
+	</table>
+
+</body>
+</html>

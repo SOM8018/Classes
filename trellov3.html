@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>trellov3</title>
+
+<script type="text/javascript">
+	
+let myTodos = {
+
+				meetings: 0,
+
+				meetDone: 0,
+
+ 				addMeetings: function(num)
+ 						{
+
+ 						this.meetings=this.meetings+num;
+
+ 						},
+
+ 				meetdone: function(num)
+
+ 				{
+ 					this.meetDone=this.meetDone+num;
+
+ 				},
+
+
+ 				getsummary: function()
+ 						{
+
+ 							this.meetings=this.meetings-this.meetDone;
+
+ 						return this.meetings;
+ 						}
+
+
+
+
+
+				}
+				console.log(myTodos);
+				myTodos.addMeetings(4);
+				myTodos.addMeetings(2);
+
+				myTodos.meetdone(5);
+				let meetvalue=myTodos.getsummary();
+				document.write(" you have "+meetvalue+" tasks today thank you");
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

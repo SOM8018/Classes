@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+
+	</title>
+
+
+<script type="text/javascript">
+	
+let myTodos = {
+
+
+userName : 'Som',
+meetings: 0,
+meetDone: 0,
+}
+
+let addMeetings = function(todo,meet){
+
+todo.meetings= todo.meetings+meet;
+
+}
+let subMeetings = function(todo,meet){
+
+
+todo.meetDone= todo.meetDone+meet;
+
+}
+
+let resetMeetings = function(todo){
+
+todo.meetings=0;
+todo.meetDone=0;
+
+}
+
+let getSummary = function(todo){
+
+
+ let meetleft= todo.meetings-todo.meetDone;
+ return (meetleft);
+
+}
+
+
+addMeetings(myTodos,4);
+addMeetings(myTodos,2);
+subMeetings(myTodos,5);
+console.log(getSummary(myTodos));
+
+let leftmeet=getSummary(myTodos);
+console.log(myTodos);
+
+
+document.write("HEY" + myTodos.userName + "You have" + myTodos.meetings + " meetings Today !<br>" );
+
+document.write("You have completed  " + myTodos.meetDone + " meetings Today !<br>" );
+
+
+document.write("HEY Som You have more " + leftmeet +  " meetings Today !<br>" );
+
+
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
